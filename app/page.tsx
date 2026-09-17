@@ -99,7 +99,7 @@ export default function Home() {
             <div><strong>System</strong><a href="#network">Orchestration intelligence</a><a href="#owner-controls">Mission decisions</a><a href="#approach">Initial focus</a></div>
             <div><strong>Principles</strong><span>Autonomy-stack independent</span><span>Fleet-level coordination</span><span>Continuous re-optimization</span></div>
           </div>
-          <div className="footer-bottom"><span>© 2026 Hyperfleets. All rights reserved.</span><a className="back-top" href="#top">Back to top <ArrowUpRight size={18}/></a></div>
+          <div className="footer-bottom"><span>© 2026 Hyperfleets. All rights reserved.</span><a className="footer-contact" href="mailto:founders@hyperfleets.ai">founders@hyperfleets.ai</a><a className="back-top" href="#top">Back to top <ArrowUpRight size={18}/></a></div>
         </div>
       </footer>
       </div>
