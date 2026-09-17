@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hyperfleets.ai'),
   title: 'Hyperfleets — We make autonomous machines work together.',
   description: 'Software that makes machines smarter. A new chapter is taking shape at Hyperfleets. Coming soon.',
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
