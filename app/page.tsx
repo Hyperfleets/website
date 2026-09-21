@@ -1,5 +1,7 @@
+import { MountainHeadline } from '@/components/marketing/mountain-headline';
 import { FeatureStory } from '@/components/marketing/feature-story';
 import { RevealEffects } from '@/components/marketing/reveal';
+import { SmoothScroll } from '@/components/marketing/smooth-scroll';
 import { HeadlightReveal } from '@/components/marketing/headlight-reveal';
 import { IntelligenceNetwork } from '@/components/marketing/intelligence-network';
 import { ArrowDown, ArrowUpRight, BatteryCharging, BriefcaseBusiness, Clock3, House, MapPin } from 'lucide-react';
@@ -7,10 +9,17 @@ import { ArrowDown, ArrowUpRight, BatteryCharging, BriefcaseBusiness, Clock3, Ho
 export default function Home() {
   return (
     <main id="top">
+      <div className="brand-intro" aria-hidden="true">
+        <div className="intro-orbit" />
+        <div className="intro-lockup"><img src="/hyperfleets-nav-logo.png" alt="" /><span>INTELLIGENCE IN MOTION</span><i /></div>
+      </div>
       <RevealEffects />
+      <SmoothScroll />
       <a className="skip-link" href="#vision">Skip to content</a>
       <section className="hero" aria-labelledby="hero-title">
-        <img className="hero-photo" src="/hero-road-cars-v3.png" alt="Cars traveling on a winding mountain road seen from above" fetchPriority="high" />
+        <div className="hero-orbit" aria-hidden="true">
+          <img className="hero-photo hero-view-front" src="/hero-desert-sky.png" alt="" fetchPriority="high" />
+        </div>
         <div className="hero-grain" aria-hidden="true" />
         <div className="hero-shade" />
         <header className="navigation">
@@ -18,8 +27,9 @@ export default function Home() {
           <nav aria-label="Main navigation"><a href="#vision">Our vision</a><a href="#network">Our intelligence</a><a href="#approach">Our approach <ArrowUpRight size={15}/></a></nav>
         </header>
         <div className="hero-topline"><span className="eyebrow">Software that makes machines smarter.</span><span className="hero-index">Coming soon</span></div>
+        <div className="hero-distant-title"><MountainHeadline /></div>
+        <div className="hero-copy"><p>We’re exploring new possibilities for autonomous machines and the world around them. More to share soon.</p><a className="pill" href="#network">Explore our vision <span><ArrowUpRight size={23}/></span></a></div>
         <div className="hero-bottom">
-          <div className="hero-copy"><h1 id="hero-title">We make autonomous machines work together.</h1><p>We’re exploring new possibilities for autonomous machines and the world around them. More to share soon.</p><a className="pill" href="#network">Explore our vision <span><ArrowUpRight size={23}/></span></a></div>
           <div className="hero-wordmark" aria-hidden="true">hyperfleets<span>.ai</span></div>
         </div>
         <a href="#vision" className="scroll-cue" aria-label="Scroll to our vision"><ArrowDown size={20}/></a>

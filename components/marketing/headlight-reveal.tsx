@@ -37,7 +37,7 @@ export function HeadlightReveal() {
   }, []);
 
   const reveal = Math.max(0, Math.min(1, (progress - 0.12) / 0.48));
-  const lights = Math.max(0, Math.min(1, (progress - 0.42) / 0.28));
+  const lights = Math.max(0, Math.min(1, (progress - 0.32) / 0.68));
 
   return (
     <section
@@ -47,10 +47,12 @@ export function HeadlightReveal() {
       style={{ '--reveal': reveal, '--lights': lights } as React.CSSProperties}
     >
       <div className="headlight-sticky">
-        <img src="/car-reveal.png" alt="A dark vehicle emerging from shadow" />
+        <div className="headlight-scene">
+          <img src="/car-reveal.png" alt="A dark vehicle emerging from shadow" />
+          <div className="headlight headlight-left" aria-hidden="true" />
+          <div className="headlight headlight-right" aria-hidden="true" />
+        </div>
         <div className="car-vignette" />
-        <div className="headlight headlight-left" aria-hidden="true" />
-        <div className="headlight headlight-right" aria-hidden="true" />
         <div className="headlight-copy">
           <span>THE AUTONOMY STACK IS ONLY THE BEGINNING</span>
           <h2 id="headlight-title">How vehicles drive.<br />What the fleet should do.</h2>

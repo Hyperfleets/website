@@ -6,16 +6,28 @@ const neurons = [[390,210],[440,185],[495,200],[530,250],[490,305],[430,325],[37
 export function IntelligenceNetwork() {
   return <section id="network" className="section intelligence-section" aria-labelledby="intelligence-title">
     <div className="section-label"><span>04 / Orchestration intelligence</span><span>A distinct layer above vehicle autonomy</span></div>
-    <div className="section-heading"><h2 id="intelligence-title">Demand meets fleet state.<br/>Mission decisions follow.</h2><p>Hyperfleets turns a changing operating picture into coordinated mission decisions for autonomous vehicles.</p></div>
+    <div className="section-heading"><h2 id="intelligence-title"><span className="intelligence-highlight">Demand meets fleet state.<br/>Mission decisions follow.</span></h2><p>Hyperfleets turns a changing operating picture into coordinated mission decisions for autonomous vehicles.</p></div>
     <figure className="neural-figure">
       <svg viewBox="0 0 900 530" role="img" aria-labelledby="neural-title neural-description">
         <title id="neural-title">Hyperfleets orchestration intelligence</title>
         <desc id="neural-description">Demand, fleet state, capacity, staging, charging, and positioning connect through Hyperfleets orchestration intelligence.</desc>
-        <defs><radialGradient id="neural-glow"><stop stopColor="#dee5f1"/><stop offset="1" stopColor="#fff" stopOpacity="0"/></radialGradient></defs>
+        <defs>
+          <radialGradient id="neural-glow"><stop stopColor="#dce0e5" stopOpacity=".5"/><stop offset="1" stopColor="#fff" stopOpacity="0"/></radialGradient>
+          <mask id="neural-wire-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="530">
+            <g fill="none" stroke="white" strokeWidth="3" strokeDasharray="1 6" strokeLinecap="round">
+              {brands.map(({name,x,y},i)=><path key={name} d={`M ${x} ${y} C ${x} 260, ${i%2 ? 570:330} ${y}, 450 260`}/>)}
+              {neurons.map(([x,y],i)=><path key={i} d={`M ${x} ${y} L ${neurons[(i+1)%neurons.length].join(' ')}`}/>)}
+            </g>
+          </mask>
+        </defs>
         <circle cx="450" cy="260" r="190" fill="url(#neural-glow)"/>
         <g className="neural-branches" fill="none" stroke="#b1bac7" strokeWidth="1.5">
           {brands.map(({name,x,y},i)=><path key={name} d={`M ${x} ${y} C ${x} 260, ${i%2 ? 570:330} ${y}, 450 260`}/>)}
           {neurons.map(([x,y],i)=><path key={i} d={`M ${x} ${y} L ${neurons[(i+1)%neurons.length].join(' ')} M ${x} ${y} L ${neurons[(i+3)%neurons.length].join(' ')}`}/>)}
+        </g>
+        <g aria-hidden="true" mask="url(#neural-wire-mask)">
+          {brands.map(({name,x,y},i)=><path className="neural-current" key={name} pathLength="100" d={i<3 ? `M ${x} ${y} C ${x} 260, ${i%2 ? 570:330} ${y}, 450 260` : `M 450 260 C ${i%2 ? 570:330} ${y}, ${x} 260, ${x} ${y}`} style={{animationDelay:`-${i*.53}s`}}/>)}
+          {neurons.map(([x,y],i)=><path className="neural-current neural-current-inner" key={i} pathLength="100" d={`M ${x} ${y} L ${neurons[(i+1)%neurons.length].join(' ')}`} style={{animationDelay:`-${i*.27}s`}}/>)}
         </g>
         {neurons.map(([x,y],i)=><circle className="neural-node" key={i} cx={x} cy={y} r={i%3===0?6:4} fill={i%3===0?'#778da9':'#252a32'} style={{animationDelay:`${i*.3}s`}}/>)}
         <rect x="354" y="235" width="192" height="50" rx="25" fill="#171413"/>
