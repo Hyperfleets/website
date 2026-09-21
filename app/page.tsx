@@ -16,6 +16,7 @@ export default function Home() {
       <RevealEffects />
       <SmoothScroll />
       <a className="skip-link" href="#vision">Skip to content</a>
+      <div className="hero-scroll-stage">
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-orbit" aria-hidden="true">
           <img className="hero-photo hero-view-front" src="/hero-desert-sky.png" alt="" fetchPriority="high" />
@@ -34,6 +35,7 @@ export default function Home() {
         </div>
         <a href="#vision" className="scroll-cue" aria-label="Scroll to our vision"><ArrowDown size={20}/></a>
       </section>
+      </div>
       <section id="vision" className="section vision">
         <div className="section-label"><span>01 / The orchestration layer</span><span>Fleet intelligence above the autonomy stack</span></div>
         <div className="belief-intro">
