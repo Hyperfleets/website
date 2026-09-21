@@ -25,6 +25,7 @@ export function SmoothScroll() {
       else frame = requestAnimationFrame(tick);
     };
     const onWheel = (event: WheelEvent) => {
+      if (document.documentElement.classList.contains('logo-intro-active')) { event.preventDefault(); return; }
       if (preference.matches || event.ctrlKey || event.metaKey || Math.abs(event.deltaX) > Math.abs(event.deltaY) || !event.cancelable) return;
       // Preserve independent scrolling in menus, dialogs and text fields.
       let node = event.target instanceof Element ? event.target : null;

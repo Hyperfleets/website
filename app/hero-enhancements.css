@@ -122,3 +122,10 @@ html.inertial-scroll{scroll-behavior:auto}
 .hero-distant-title{z-index:2}
 .hero-distant-title h1{font-size:clamp(2rem,4.8vw,5.2rem)}
 @media(max-width:800px){.hero-copy{top:75%}.hero-distant-title h1{font-size:clamp(1.45rem,5.2vw,2.8rem)}}
+
+/* Play the supplied 4.2-second logo reveal once against its own black background. */
+html.logo-intro-active,html.logo-intro-active body{overflow:hidden}
+.gif-intro{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#000}
+.gif-intro img{display:block;width:min(800px,100vw,100svh);height:auto;max-height:100svh;object-fit:contain}
+.hero-wordmark{font-size:13vw}
+@media(max-width:800px){.hero-wordmark{font-size:13vw}}

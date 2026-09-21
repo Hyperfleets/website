@@ -25,14 +25,14 @@ export function MountainHeadline() {
       const holder=heading.parentElement!;
       // Rise clear of the ridge, then hold the revealed position.
       const ease=(v:number)=>v*v*(3-2*v);
-      const liftPhase=ease(Math.min(1,progress/.55));
-      const lift=100*scale+heading.offsetHeight*.55;
+      const liftPhase=ease(Math.min(1,progress/.7));
+      const lift=45*scale+heading.offsetHeight*.35;
       const base=cropY+540*scale-heading.offsetHeight*.75;
       holder.style.top=`${base-liftPhase*lift}px`;
       const text=heading.getBoundingClientRect();
       // Fixed world-space terrain mask; only the headline rises behind it.
       const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1692" height="930"><path fill="white" d="${ridge}"/></svg>`;
-      heading.style.maskImage=progress>=.55?'none':`url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+      heading.style.maskImage=progress>=.7?'none':`url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
       heading.style.maskRepeat='no-repeat';
       heading.style.maskSize=`${width}px ${height}px`;
       heading.style.maskPosition=`${area.left-text.left+(area.width-width)/2}px ${area.top-text.top+cropY}px`;
