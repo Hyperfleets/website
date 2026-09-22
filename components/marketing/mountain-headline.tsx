@@ -13,6 +13,16 @@ export function MountainHeadline() {
     const hero=heading?.closest('.hero');
     const stage=heading?.closest('.hero-scroll-stage');
     if(!heading || !hero || !stage) return;
+    const mobile=window.matchMedia('(max-width: 800px)');
+    if(mobile.matches){
+      const holder=heading.parentElement!;
+      const letters=heading.firstElementChild as HTMLElement;
+      holder.style.top='40%';
+      heading.style.maskImage='none';
+      letters.style.transform='none';
+      letters.style.opacity='1';
+      return;
+    }
     const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
     let progress=reduced.matches?1:0;
     let frame=0;

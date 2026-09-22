@@ -138,13 +138,21 @@ html.inertial-scroll{scroll-behavior:auto}
 .hero-bottom{left:4%;right:4%;bottom:18px}
 .hero-wordmark{font-size:clamp(3rem,9.8vw,9rem);line-height:.82}
 @media(max-width:800px){
-  .hero-scroll-stage{height:210svh;margin:0 8px 18px}
+  .hero-scroll-stage{height:auto;margin:0 8px 18px}
   .hero-scroll-stage .hero{
+    position:relative;
     top:8px;
     height:calc(100svh - 32px);
     border-radius:24px 24px 36px 36px;
     overflow:hidden;
     clip-path:inset(0 round 24px 24px 36px 36px);
+  }
+  .hero-distant-title{top:40%;width:94%}
+  .hero-distant-title h1{
+    font-size:clamp(2.3rem,9.4vw,4.1rem);
+    line-height:1.02;
+    letter-spacing:-.055em;
+    text-shadow:0 2px 18px rgba(0,0,0,.5),0 0 20px rgba(255,255,255,.16);
   }
   .hero-copy{top:70%;width:88%}
   .hero-bottom{left:4%;right:4%;bottom:14px}
