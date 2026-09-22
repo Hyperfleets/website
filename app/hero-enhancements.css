@@ -157,4 +157,5 @@ html.inertial-scroll{scroll-behavior:auto}
   .hero-copy{top:70%;width:88%}
   .hero-bottom{left:4%;right:4%;bottom:14px}
   .hero-wordmark{font-size:10.2vw}
+  .scroll-cue{right:4%;bottom:14px;z-index:4}
 }
