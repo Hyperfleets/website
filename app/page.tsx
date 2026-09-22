@@ -4,6 +4,7 @@ import { RevealEffects } from '@/components/marketing/reveal';
 import { SmoothScroll } from '@/components/marketing/smooth-scroll';
 import { HeadlightReveal } from '@/components/marketing/headlight-reveal';
 import { IntelligenceNetwork } from '@/components/marketing/intelligence-network';
+import { MobileNavigation } from '@/components/marketing/mobile-navigation';
 import { ArrowDown, ArrowUpRight, BatteryCharging, BriefcaseBusiness, Clock3, House, MapPin } from 'lucide-react';
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <header className="navigation">
           <a href="#top" className="brand" aria-label="Hyperfleets home"><img src="/hyperfleets-nav-logo.png" alt="Hyperfleets" /></a>
           <nav aria-label="Main navigation"><a href="#vision">Our vision</a><a href="#network">Our intelligence</a><a href="#approach">Our approach <ArrowUpRight size={15}/></a></nav>
+          <MobileNavigation />
         </header>
         <div className="hero-topline"><span className="eyebrow">Software that makes machines smarter.</span><span className="hero-index">Coming soon</span></div>
         <div className="hero-distant-title"><MountainHeadline /></div>
@@ -73,7 +75,7 @@ export default function Home() {
           <article className="bento-card bento-energy-card">
             <span className="bento-card-title"><BatteryCharging size={18}/> Charging plan</span>
             <div className="battery-ring"><strong>Plan</strong><span>ACTIVE</span></div>
-            <h3>Coordinate charging with upcoming missions.</h3>
+            <h3><span className="text-highlight">Coordinate</span> charging with upcoming missions.</h3>
           </article>
           <article className="bento-card bento-home-card">
             <span className="bento-card-title"><House size={18}/> Capacity plan</span>
