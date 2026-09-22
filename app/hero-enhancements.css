@@ -123,14 +123,8 @@ html.inertial-scroll{scroll-behavior:auto}
 .hero-distant-title h1{font-size:clamp(2rem,4.8vw,5.2rem)}
 @media(max-width:800px){.hero-copy{top:75%}.hero-distant-title h1{font-size:clamp(1.45rem,5.2vw,2.8rem)}}
 
-/* Play the supplied 4.2-second logo reveal once against its own black background. */
-html.logo-intro-active,html.logo-intro-active body{overflow:hidden}
-.gif-intro{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#000;opacity:1;transition:opacity .7s cubic-bezier(.4,0,.2,1)}
-.gif-intro.is-exiting{opacity:0;pointer-events:none}
-.gif-intro img{display:block;width:min(800px,100vw,100svh);height:auto;max-height:100svh;object-fit:contain}
 .hero-wordmark{font-size:clamp(2.75rem,8.7vw,8rem)}
 @media(max-width:800px){.hero-wordmark{font-size:9.5vw}}
-@media(prefers-reduced-motion:reduce){.gif-intro{transition-duration:.15s}}
 
 /* Keep the pinned hero framed as a floating card, including its lower edge. */
 .hero-scroll-stage{height:220svh;margin:0 12px 24px}

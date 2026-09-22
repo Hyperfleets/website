@@ -1,4 +1,3 @@
-import { LogoIntro } from '@/components/marketing/logo-intro';
 import { MountainHeadline } from '@/components/marketing/mountain-headline';
 import { FeatureStory } from '@/components/marketing/feature-story';
 import { RevealEffects } from '@/components/marketing/reveal';
@@ -10,7 +9,6 @@ import { ArrowDown, ArrowUpRight, BatteryCharging, BriefcaseBusiness, Clock3, Ho
 export default function Home() {
   return (
     <main id="top">
-      <LogoIntro />
       <RevealEffects />
       <SmoothScroll />
       <a className="skip-link" href="#vision">Skip to content</a>
