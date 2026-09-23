@@ -52,7 +52,7 @@ export default function Home() {
       <section className="section capability-bento" aria-labelledby="system-at-work-title">
         <div className="bento-heading">
           <span className="small-label">A DAY IN THE OPERATION</span>
-          <h2 id="system-at-work-title"><span className="desktop-copy">Every vehicle.<br/>One working plan.</span><span className="mobile-copy">Keep every vehicle on the right job.</span></h2>
+          <h2 id="system-at-work-title">Keep every vehicle on the right job.</h2>
           <p>Hyperfleets keeps assignments, charging, staging, and capacity in sync as the day changes.</p>
         </div>
         <div className="bento-grid">
@@ -85,10 +85,11 @@ export default function Home() {
       </section>
       <section className="section machine-study" aria-labelledby="machine-study-title">
         <div className="section-label"><span>03 / In motion</span><span>The plan moves with the fleet</span></div>
-        <div className="section-heading"><h2 id="machine-study-title"><span className="desktop-copy">The operation never stands still.<br/>Neither does the plan.</span><span className="mobile-copy">Adjust the plan as conditions change.</span></h2><p>A late arrival, a low battery, or a sudden spike in demand can change what should happen next. Hyperfleets keeps up.</p></div>
+        <div className="section-heading"><h2 id="machine-study-title">Adjust the plan as conditions change.</h2><p>A late arrival, a low battery, or a sudden spike in demand can change what should happen next. Hyperfleets keeps up.</p></div>
         <figure><img src="/hyperfleets-orchestration-sketch.png" alt="An original architectural sketch of autonomous vehicles moving through a connected orchestration system" loading="lazy"/><figcaption>One change can reshape the plan across the fleet.</figcaption></figure>
       </section>
       <IntelligenceNetwork />
+      <div className="network-stack-runway" aria-hidden="true" />
       </div>
       <div className="dark-return">
       <section id="approach" className="section approach">

@@ -161,15 +161,21 @@ html.inertial-scroll{scroll-behavior:auto}
 }
 
 .mobile-copy{display:none}
+.network-stack-runway{display:none}
 @media(max-width:800px){
   .desktop-copy{display:none}
   .mobile-copy{display:inline}
-  .light-zone{padding-bottom:100svh}
+  .light-zone{padding-bottom:0}
+  .network-stack-runway{display:block;height:100svh}
+  #network .neural-figure{background:transparent;border:0;border-radius:0;overflow:visible}
+  #network .neural-figure .neural-desktop{display:none!important}
+  #network .neural-figure .neural-mobile{display:block!important;width:100%;height:auto;min-height:0}
   .intelligence-section{position:sticky;top:var(--network-pin-top,0px);padding-bottom:48px;background:#f4f4f2}
   .dark-return{margin-top:-100svh;isolation:isolate}
 }
 @media(max-width:800px) and (prefers-reduced-motion:reduce){
   .light-zone{padding-bottom:40px}
+  .network-stack-runway{display:none}
   .intelligence-section{position:relative;top:auto}
   .dark-return{margin-top:0}
 }

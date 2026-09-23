@@ -21,7 +21,7 @@ export function IntelligenceNetwork() {
   }, []);
   return <section ref={section} id="network" className="section intelligence-section" aria-labelledby="intelligence-title">
     <div className="section-label"><span>04 / How decisions connect</span><span>One system, fed by the whole operation</span></div>
-    <div className="section-heading"><h2 id="intelligence-title"><span className="intelligence-highlight desktop-copy">The fleet changes.<br/>The plan changes with it.</span><span className="intelligence-highlight mobile-copy">See what the whole fleet needs next.</span></h2><p>Demand rises. Batteries run low. Vehicles drift out of position. Hyperfleets reads those changes together and decides what should happen next.</p></div>
+    <div className="section-heading"><h2 id="intelligence-title"><span className="intelligence-highlight">See what the whole fleet needs next.</span></h2><p>Demand rises. Batteries run low. Vehicles drift out of position. Hyperfleets reads those changes together and decides what should happen next.</p></div>
     <figure className="neural-figure">
       <svg className="neural-desktop" viewBox="0 0 900 530" role="img" aria-labelledby="neural-title neural-description">
         <title id="neural-title">Hyperfleets orchestration intelligence</title>
