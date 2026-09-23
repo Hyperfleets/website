@@ -155,7 +155,21 @@ html.inertial-scroll{scroll-behavior:auto}
     text-shadow:0 2px 18px rgba(0,0,0,.5),0 0 20px rgba(255,255,255,.16);
   }
   .hero-copy{top:70%;width:88%}
-  .hero-bottom{left:4%;right:4%;bottom:14px}
-  .hero-wordmark{font-size:10.2vw}
-  .scroll-cue{right:4%;bottom:14px;z-index:4}
+  .hero-bottom{left:3%;right:3%;bottom:14px;text-align:center}
+  .hero-wordmark{font-size:12.2vw}
+  .scroll-cue{right:3%;bottom:14px;z-index:4}
+}
+
+.mobile-copy{display:none}
+@media(max-width:800px){
+  .desktop-copy{display:none}
+  .mobile-copy{display:inline}
+  .light-zone{padding-bottom:100svh}
+  .intelligence-section{position:sticky;top:var(--network-pin-top,0px);padding-bottom:48px;background:#f4f4f2}
+  .dark-return{margin-top:-100svh;isolation:isolate}
+}
+@media(max-width:800px) and (prefers-reduced-motion:reduce){
+  .light-zone{padding-bottom:40px}
+  .intelligence-section{position:relative;top:auto}
+  .dark-return{margin-top:0}
 }

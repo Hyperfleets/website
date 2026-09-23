@@ -4,17 +4,17 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { Clock3, BriefcaseBusiness, BatteryCharging, House, ArrowUpRight } from 'lucide-react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 const features = [
- {id:'rules',icon:Clock3,title:'Plans from fleet state.',description:'Availability, position, energy, and operating constraints shape each mission decision.',heading:'See the whole fleet.',image:'/owner-rules.png',caption:'State becomes context for the next decision.',alt:'Graphite vehicle with a sculptural clock and operating controls on white'},
- {id:'work',icon:BriefcaseBusiness,title:'Allocates the next mission.',description:'Changing demand is matched with available capacity across the operation.',heading:'Capacity meets demand.',image:'/owner-work.png',caption:'Mission decisions remain coordinated at fleet scale.',alt:'Silver vehicle at branching white routes with destination markers'},
- {id:'energy',icon:BatteryCharging,title:'Coordinates charging.',description:'Energy readiness is planned alongside staging, allocation, and upcoming demand.',heading:'Energy stays in the plan.',image:'/owner-energy.png',caption:'Charging is part of the operating picture.',alt:'Graphite vehicle at a white charging pedestal with a pale blue energy loop'},
- {id:'home',icon:House,title:'Repositions continuously.',description:'Vehicles are staged and repositioned as fleet state and demand evolve.',heading:'Position for what comes next.',image:'/owner-home.png',caption:'The plan updates as conditions change.',alt:'Silver vehicle arriving at a structured destination with a warm window'},
+ {id:'rules',icon:Clock3,title:'See the fleet clearly.',description:'Know which vehicles are free, where they are, and how much energy they have.',heading:'The whole fleet, in view.',image:'/owner-rules.png',caption:'Every assignment starts with a clear picture of the operation.',alt:'Graphite vehicle with a sculptural clock and operating controls on white'},
+ {id:'work',icon:BriefcaseBusiness,title:'Send the right vehicle.',description:'Match each new job with the vehicle best placed to take it.',heading:'A better match for every job.',image:'/owner-work.png',caption:'Demand and available capacity meet in one live plan.',alt:'Silver vehicle at branching white routes with destination markers'},
+ {id:'energy',icon:BatteryCharging,title:'Charge without slowing down.',description:'Plan charging around upcoming work instead of treating it as an interruption.',heading:'Charging, timed to the operation.',image:'/owner-energy.png',caption:'Energy becomes part of the schedule, not a surprise.',alt:'Graphite vehicle at a white charging pedestal with a pale blue energy loop'},
+ {id:'home',icon:House,title:'Stay ahead of demand.',description:'Move idle vehicles before demand shifts, so capacity is already where it needs to be.',heading:'Ready before the next request.',image:'/owner-home.png',caption:'The fleet moves into position before the pressure arrives.',alt:'Silver vehicle arriving at a structured destination with a warm window'},
 ];
 export function FeatureStory() {
  const [selected,setSelected] = useState('rules');
  const reduced = useReducedMotion();
  return <section id="owner-controls" className="section feature-section">
-   <div className="section-label"><span>02 / Orchestration capabilities</span><span>One operating picture. Continuous decisions.</span></div>
-   <h2>Every vehicle has a state.<br/><span>The fleet needs a plan.</span></h2>
+   <div className="section-label"><span>02 / What Hyperfleets does</span><span>From live fleet state to the next move</span></div>
+   <h2>The fleet changes by the minute.<br/><span>The plan should too.</span></h2>
    <Tabs value={selected} onValueChange={(value) => setSelected(String(value))} orientation="vertical" className="feature-tabs">
      <TabsList className="feature-list" aria-label="Explore orchestration capabilities" aria-orientation="vertical" variant="line" onKeyDown={(event) => {
        if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;

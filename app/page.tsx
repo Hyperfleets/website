@@ -5,7 +5,7 @@ import { SmoothScroll } from '@/components/marketing/smooth-scroll';
 import { HeadlightReveal } from '@/components/marketing/headlight-reveal';
 import { IntelligenceNetwork } from '@/components/marketing/intelligence-network';
 import { MobileNavigation } from '@/components/marketing/mobile-navigation';
-import { ArrowDown, ArrowUpRight, BatteryCharging, BriefcaseBusiness, Clock3, House, MapPin } from 'lucide-react';
+import { ArrowUpRight, BatteryCharging, BriefcaseBusiness, Clock3, House, MapPin } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -31,79 +31,78 @@ export default function Home() {
         <div className="hero-bottom">
           <div className="hero-wordmark" aria-hidden="true">hyperfleets<span>.ai</span></div>
         </div>
-        <a href="#vision" className="scroll-cue" aria-label="Scroll to our vision"><ArrowDown size={20}/></a>
       </section>
       </div>
       <section id="vision" className="section vision">
-        <div className="section-label"><span>01 / The orchestration layer</span><span>Fleet intelligence above the autonomy stack</span></div>
+        <div className="section-label"><span>01 / The orchestration layer</span><span>Fleet coordination above the autonomy stack</span></div>
         <div className="belief-intro">
-          <h2><span className="belief-primary">Autonomy drives the vehicle.</span><span>Hyperfleets directs the fleet.</span></h2>
-          <p className="belief-lead">The autonomy stack handles how each vehicle drives. Hyperfleets determines what the fleet should do next.</p>
+          <h2><span className="belief-primary">Each vehicle knows how to drive.</span><span>The fleet still needs direction.</span></h2>
+          <p className="belief-lead">Autonomy handles the road. Hyperfleets handles the operation: where each vehicle should go, when it should charge, and what it should do next.</p>
         </div>
         <div className="belief-grid">
-          <article><span>01</span><h3>Read the operating picture.</h3><p>Demand and fleet state create a changing view of vehicles, energy, position, and capacity.</p></article>
-          <article><span>02</span><h3>Decide the next mission.</h3><p>Hyperfleets coordinates allocation, staging, charging, and repositioning at fleet level.</p></article>
-          <article><span>03</span><h3>Re-optimize continuously.</h3><p>As fleet state and demand change, mission decisions adapt across the operation.</p></article>
+          <article><span>01</span><h3>Know what you have.</h3><p>See which vehicles are available, where they are, how much energy they have, and what work is coming in.</p></article>
+          <article><span>02</span><h3>Put the right vehicle on the job.</h3><p>Assign, stage, charge, and reposition the fleet from one shared view of the operation.</p></article>
+          <article><span>03</span><h3>Keep the plan current.</h3><p>When demand moves or a vehicle’s state changes, update the plan before the operation falls behind.</p></article>
         </div>
-        <p className="belief-boundary">Demand + Fleet State → Hyperfleets → Mission Decisions → Autonomous Vehicles</p>
+        <p className="belief-boundary">A live view of the fleet. A plan that keeps moving.</p>
       </section>
       <FeatureStory />
       <HeadlightReveal />
       <div className="light-zone">
       <section className="section capability-bento" aria-labelledby="system-at-work-title">
         <div className="bento-heading">
-          <span className="small-label">THE SYSTEM AT WORK</span>
-          <h2 id="system-at-work-title">One plan.<br/>Every moving part.</h2>
-          <p>A changing operating picture becomes coordinated mission decisions across the fleet.</p>
+          <span className="small-label">A DAY IN THE OPERATION</span>
+          <h2 id="system-at-work-title"><span className="desktop-copy">Every vehicle.<br/>One working plan.</span><span className="mobile-copy">Keep every vehicle on the right job.</span></h2>
+          <p>Hyperfleets keeps assignments, charging, staging, and capacity in sync as the day changes.</p>
         </div>
         <div className="bento-grid">
           <article className="bento-card bento-photo-card">
             <img src="/hero-road-cars-v3.png" alt="Autonomous vehicles moving through a coordinated road network" loading="lazy"/>
-            <div><BriefcaseBusiness size={19}/><span>Vehicle allocation</span><h3>Match the right vehicle to the next mission.</h3></div>
+            <div><BriefcaseBusiness size={19}/><span>Vehicle allocation</span><h3>Send the best-positioned vehicle.</h3></div>
           </article>
           <article className="bento-card bento-rule-card">
             <span className="bento-card-title"><Clock3 size={18}/> Demand window</span>
-            <h3>Plan available capacity across the operating horizon.</h3>
+            <h3>Keep enough capacity ready for the next demand window.</h3>
             <div className="schedule-track"><span>Now</span><i/><strong>Demand window</strong><span>Next</span></div>
-            <small>The mission plan updates as demand changes.</small>
+            <small>The schedule moves when demand does.</small>
           </article>
           <article className="bento-card bento-map-card">
             <span className="bento-card-title"><MapPin size={18}/> Fleet staging</span>
-            <h3>Stage capacity closer to expected demand.</h3>
+            <h3>Put vehicles where they’ll be needed.</h3>
             <div className="mini-map" aria-hidden="true"><i/><i/><i/><i/><span><MapPin size={20}/></span></div>
           </article>
           <article className="bento-card bento-energy-card">
             <span className="bento-card-title"><BatteryCharging size={18}/> Charging plan</span>
             <div className="battery-ring"><strong>Plan</strong><span>ACTIVE</span></div>
-            <h3><span className="text-highlight">Coordinate</span> charging with upcoming missions.</h3>
+            <h3><span className="text-highlight">Charge</span> at the right time—not just the first available time.</h3>
           </article>
           <article className="bento-card bento-home-card">
             <span className="bento-card-title"><House size={18}/> Capacity plan</span>
             <div className="arrival-card"><small>NEXT PLANNING HORIZON</small><strong>Continuous</strong><span>Re-optimized</span></div>
-            <h3>Keep the fleet ready for what comes next.</h3>
+            <h3>Stay ready for the next shift in demand.</h3>
           </article>
         </div>
       </section>
       <section className="section machine-study" aria-labelledby="machine-study-title">
-        <div className="section-label"><span>03 / Continuous orchestration</span><span>Fleet state meets changing demand</span></div>
-        <div className="section-heading"><h2 id="machine-study-title">Many moving parts.<br/>One operating picture.</h2><p>Hyperfleets coordinates allocation, staging, charging, repositioning, and capacity planning as conditions change.</p></div>
-        <figure><img src="/hyperfleets-orchestration-sketch.png" alt="An original architectural sketch of autonomous vehicles moving through a connected orchestration system" loading="lazy"/><figcaption>Mission decisions continuously adapt across the fleet.</figcaption></figure>
+        <div className="section-label"><span>03 / In motion</span><span>The plan moves with the fleet</span></div>
+        <div className="section-heading"><h2 id="machine-study-title"><span className="desktop-copy">The operation never stands still.<br/>Neither does the plan.</span><span className="mobile-copy">Adjust the plan as conditions change.</span></h2><p>A late arrival, a low battery, or a sudden spike in demand can change what should happen next. Hyperfleets keeps up.</p></div>
+        <figure><img src="/hyperfleets-orchestration-sketch.png" alt="An original architectural sketch of autonomous vehicles moving through a connected orchestration system" loading="lazy"/><figcaption>One change can reshape the plan across the fleet.</figcaption></figure>
       </section>
       <IntelligenceNetwork />
       </div>
       <div className="dark-return">
       <section id="approach" className="section approach">
-        <div className="section-label"><span>05 / Initial focus</span><span>Complex operations. Predictable demand.</span></div>
-        <div className="section-heading"><h2>Structured environments.<br/>Fleet-level complexity.</h2><p>Hyperfleets is initially focused on structured transportation environments where demand is predictable but operations are complex.</p></div>
+        <div className="section-label"><span>05 / Where we start</span><span>Built for operations with real constraints</span></div>
+        <div className="section-heading"><h2>Start where coordination<br/>matters most.</h2><p>We’re building Hyperfleets for structured transportation networks—places with repeatable routes, predictable demand, and enough moving pieces that manual planning starts to break down.</p></div>
         <div className="approach-rows">
-          <article><span>01</span><h3>Above the autonomy stack.</h3><p>Autonomous driving systems handle navigation, vehicle control, and driving safety.</p></article>
-          <article><span>02</span><h3>Focused on fleet decisions.</h3><p>Hyperfleets coordinates what vehicles should do, where capacity should be, and how the plan should adapt.</p></article>
-          <article><span>03</span><h3>Built for continuous change.</h3><p>Fleet state and demand evolve. Orchestration continuously re-optimizes the mission plan.</p></article>
+          <article><span>01</span><h3>Works with the autonomy already in the vehicle.</h3><p>The driving system stays focused on navigation, control, and safety. Hyperfleets works above it.</p></article>
+          <article><span>02</span><h3>Built around the dispatcher’s hardest decisions.</h3><p>Which vehicle goes next? Where should capacity wait? When can charging happen without losing coverage?</p></article>
+          <article><span>03</span><h3>Changes the plan when the day changes.</h3><p>A fleet rarely runs exactly as expected. Hyperfleets keeps assignments and capacity aligned as conditions move.</p></article>
         </div>
       </section>
       <footer className="footer-wrap">
         <div className="footer-card">
-          <div className="footer-lead"><a href="#top" className="footer-brand" aria-label="Hyperfleets home"><img src="/hyperfleets-logo.png" alt="hyperfleets.ai"/></a><p>Autonomy for the fleet, not just the vehicle.</p></div>
+          <div className="footer-lead"><a href="#top" className="footer-brand" aria-label="Hyperfleets home"><img src="/hyperfleets-logo.png" alt="hyperfleets.ai"/></a><p>A better way to run autonomous fleets.</p></div>
           <div className="footer-links">
             <div><strong>Explore</strong><a href="#network">In development</a><a href="#vision">The orchestration layer</a><a href="#network">System architecture</a><a href="#owner-controls">Capabilities</a></div>
             <div><strong>System</strong><a href="#network">Orchestration intelligence</a><a href="#owner-controls">Mission decisions</a><a href="#approach">Initial focus</a></div>

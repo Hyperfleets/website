@@ -54,9 +54,9 @@ export function HeadlightReveal() {
         </div>
         <div className="car-vignette" />
         <div className="headlight-copy">
-          <span>THE AUTONOMY STACK IS ONLY THE BEGINNING</span>
-          <h2 id="headlight-title">How vehicles drive.<br />What the fleet should do.</h2>
-          <p>A distinct intelligence layer connects the two.</p>
+          <span>AUTONOMY GETS THE VEHICLE DOWN THE ROAD</span>
+          <h2 id="headlight-title">Driving is one problem.<br />Running the fleet is another.</h2>
+          <p>Hyperfleets works above the autonomy stack to coordinate the operation.</p>
         </div>
         <ArrowDown className="reveal-arrow" aria-hidden="true" />
       </div>
