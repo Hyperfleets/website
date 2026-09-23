@@ -27,7 +27,7 @@ export default function Home() {
         </header>
         <div className="hero-topline"><span className="eyebrow">Software that makes machines smarter.</span><span className="hero-index">Coming soon</span></div>
         <div className="hero-distant-title"><MountainHeadline /></div>
-        <div className="hero-copy"><p>We’re exploring new possibilities for autonomous machines and the world around them. More to share soon.</p><a className="pill" href="#network">Explore our vision <span><ArrowUpRight size={23}/></span></a></div>
+        <div className="hero-copy"><p>AI intelligence infrastructure for orchestrating autonomous and connected fleets for large enterprises.</p><a className="pill" href="#network">Explore our vision <span><ArrowUpRight size={23}/></span></a></div>
         <div className="hero-bottom">
           <div className="hero-wordmark" aria-hidden="true">hyperfleets<span>.ai</span></div>
         </div>
