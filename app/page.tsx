@@ -5,6 +5,7 @@ import { SmoothScroll } from '@/components/marketing/smooth-scroll';
 import { HeadlightReveal } from '@/components/marketing/headlight-reveal';
 import { IntelligenceNetwork } from '@/components/marketing/intelligence-network';
 import { MobileNavigation } from '@/components/marketing/mobile-navigation';
+import { AdaptiveFleet } from '@/components/marketing/adaptive-fleet';
 import { ArrowUpRight, BatteryCharging, BriefcaseBusiness, Clock3, House, MapPin } from 'lucide-react';
 
 export default function Home() {
@@ -86,7 +87,7 @@ export default function Home() {
       <section className="section machine-study" aria-labelledby="machine-study-title">
         <div className="section-label"><span>03 / In motion</span><span>The plan moves with the fleet</span></div>
         <div className="section-heading"><h2 id="machine-study-title">Adjust the plan as conditions change.</h2><p>A late arrival, a low battery, or a sudden spike in demand can change what should happen next. Hyperfleets keeps up.</p></div>
-        <figure><img src="/hyperfleets-orchestration-sketch.png" alt="An original architectural sketch of autonomous vehicles moving through a connected orchestration system" loading="lazy"/><figcaption>One change can reshape the plan across the fleet.</figcaption></figure>
+        <AdaptiveFleet />
       </section>
       <IntelligenceNetwork />
       <div className="network-stack-runway" aria-hidden="true" />
